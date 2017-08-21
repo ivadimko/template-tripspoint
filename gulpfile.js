@@ -42,25 +42,40 @@ gulp.task('browser-sync', function() {
 	});
 });
 
-gulp.task('sass', function () {
-  return gulp.src('./dev/assets/scss/**/*.scss')
+gulp.task('sass-base', function () {
+  return gulp.src('./dev/assets/scss/base.scss')
   	.pipe(sourcemaps.init())
     .pipe(sass({
-    	includePaths: [bourbon]
+		includePaths: [bourbon],
+		outputStyle: 'compressed'
     }).on("error", notify.onError()))
     .pipe(autoprefixer(['last 3 versions', '> 5%', 'Firefox ESR', 'ie >= 7']))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./dev/assets/css'))
-    .pipe(browserSync.reload({stream: true}));
+    .pipe(gulp.dest('./dev/assets/css'));
 });
 
+gulp.task('sass-main', function () {
+	return gulp.src('./dev/assets/scss/main.scss')
+	.pipe(sourcemaps.init())
+	.pipe(sass({
+		includePaths: [bourbon]
+    }).on("error", notify.onError()))
+	.pipe(autoprefixer(['last 3 versions', '> 5%', 'Firefox ESR', 'ie >= 7']))
+	.pipe(sourcemaps.write())
+	.pipe(gulp.dest('./dev/assets/css'))
+  });
+
+gulp.task('sass', ['sass-base', 'sass-main'], function(){
+	browserSync.reload;
+});  
+
 gulp.task('watch', ['html', 'sass', 'js', 'browser-sync'], function() {
-	gulp.watch('./dev/assets/scss/**/*.scss', ['sass']);
+	gulp.watch('./dev/assets/scss/**/*.scss', ['sass', browserSync.reload]);
 	gulp.watch('./dev/assets/scripts/**/*.js', browserSync.reload);
 	gulp.watch("./dev/src/**/*.html", ['html']);
 });
 
-gulp.task('build', ['removerel', 'sass', 'js'], function() {
+gulp.task('build', ['removerel', 'html', 'sass', 'js'], function() {
 
 	var buildFiles = gulp.src([
 		'./dev/*.html',
@@ -68,7 +83,9 @@ gulp.task('build', ['removerel', 'sass', 'js'], function() {
 
 	var buildCss = gulp.src([
 		'./dev/assets/css/main.css',
+		'./dev/assets/css/base.css',
 		]).pipe(gulp.dest('./rel/assets/css'));
+	
 
 	var buildJs = gulp.src([
 		'./dev/assets/scripts/scripts.min.js',

@@ -1,17 +1,113 @@
 <header id="header" class="header">
-
-    <nav class="header__nav" role="navigation">
-        <ul class="header__menu">
-            <li><a href="#section1">Секция 1</a></li>
-            <li><a href="#section2">Секция 2</a></li>
-            <li><a href="#section3">Секция 3</a></li>
-        </ul>
-    </nav>
-
+<!--
+    
+-->
+<!--    
     <button class="burger header__burger">
         <span></span>
         <span></span>
         <span></span>
     </button>
-
+ -->
+<!-- <div class="marker">
+    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" 
+    viewBox="0 0 39.000000 53.000000"
+    preserveAspectRatio="xMidYMid meet">
+   
+   <g transform="translate(0.000000,53.000000) scale(0.100000,-0.100000)"
+   stroke="none">
+   <path d="M115 511 c-67 -31 -115 -102 -115 -168 1 -60 78 -200 174 -317 l24
+   -28 72 101 c77 107 120 196 120 246 0 38 -31 104 -61 132 -58 53 -144 66 -214
+   34z m155 -23 c105 -54 114 -201 18 -270 -26 -18 -46 -23 -93 -23 -69 0 -114
+   25 -142 78 -23 44 -21 116 3 158 22 39 93 79 139 79 17 0 51 -10 75 -22z"/>
+   <path d="M119 467 c-45 -30 -71 -82 -65 -130 20 -168 262 -168 282 0 10 78
+   -60 153 -141 153 -27 0 -54 -8 -76 -23z m101 -7 c12 -7 8 -12 -20 -24 -72 -31
+   -105 -97 -55 -110 20 -5 25 -13 25 -39 0 -18 5 -38 12 -45 17 -17 -3 -16 -46
+   2 -23 10 -38 25 -48 53 -21 50 -13 89 26 129 43 43 75 54 106 34z m-2 -63 c6
+   10 13 15 17 11 10 -9 -13 -48 -28 -48 -17 0 -37 21 -37 39 0 11 4 11 19 -3 18
+   -17 20 -17 29 1z m95 -67 c18 -16 -38 -90 -67 -90 -10 0 -6 40 5 63 9 16 9 22
+   0 25 -6 2 -11 8 -11 13 0 9 60 1 73 -11z"/>
+   </g>
+   </svg>      
+</div> -->
+<div class="header-wrap">
+    <div class="header__top-line">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <a href="#" class="header__logo">
+                        <img src="./assets/img/logo.png" alt="main logo" class="responsive">
+                    </a>
+                </div>
+                <div class="col-md-10">
+                    <nav class="header__nav" role="navigation">
+                        <ul class="header__menu">
+                            <li class="header-menu__item"><a href="#"><span class="icon icon--left icon--bordered spin circle"><i class="fa fa-user icon--animated" aria-hidden="true"></i></span>Log in or create any account</a></li>                                
+                            <li class="header-menu__item icon--bordered icon--padding draw"><a href="#">Add your listing</a></li>
+                            <li class="header-menu__item"><a href="#"><i class="fa fa-heart icon--animated" aria-hidden="true"></i></a></li>
+                            <li class="header-menu__item"><a href="#"><i class="fa fa-eye icon--animated" aria-hidden="true"></i></a></li>
+                            <li class="header-menu__item text-uppercase"><a href="#">Eur<i class="fa fa-angle-down menu-item__arrow" aria-hidden="true"></i></a>
+                                <ul class="header__submenu">
+                                    <li class="header-submenu__item text-uppercase"><a href="#">USD</a></li>
+                                    <li class="header-submenu__item text-uppercase"><a href="#">UAH</a></li>
+                                    <li class="header-submenu__item text-uppercase"><a href="#">RUR</a></li>
+                                </ul>
+                            </li>
+                            <li class="header-menu__item"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="icon icon--right icon--bordered spin circle">0</span></a></li>
+                       </ul>
+                   </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header__content text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <form action="#" class="header__form">
+                        <h1 class="form__head">Your journey begins now</h1>
+                        <p class="form__description">Unique Tours, trips, activities, accommodations, rental services &amp; 
+                                things to do from local companies and people all the world around</p>
+                        <label class="form__input--location"><input type="text" class="form__input" placeholder="Where are you going?" required></label>
+                        <label class="form__input--interest"><input type="text" class="form__input" placeholder="What are you looking for?" required></label>
+                        <input type="submit" class="button form__button" value="Search">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="header__bot-line">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="header-bot-line__item">
+                            <span class="item__number icon icon--bordered spin circle">1</span>
+                            <div class="item__description">
+                                <a href="#"class="item__head">Book before you go</a>
+                                <p class="item__text">Pay just a small Booking Deposit to confirm your booking.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                            <div class="header-bot-line__item">
+                                    <span class="item__number icon icon--bordered spin circle">2</span>
+                                    <div class="item__description">
+                                        <a href="#"class="item__head">Get your e-ticket</a>
+                                        <p class="item__text">Save it in phone or print and take with you to your travel destination</p>
+                                    </div>
+                                </div>
+                    </div>
+                    <div class="col-md-4">
+                            <div class="header-bot-line__item">
+                                    <span class="item__number icon icon--bordered spin circle">3</span>
+                                    <div class="item__description">
+                                        <a href="#"class="item__head">Use your e-ticket</a>
+                                        <p class="item__text">Show e-Ticket of your travel destination and pay the balance on the day of activity</p>
+                                    </div>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </header>

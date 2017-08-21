@@ -1,0 +1,83 @@
+.marker{
+	fill: $color_blue;
+	width: 40px;
+	display: inline-block;
+}
+
+html {
+	font-size: $font-size-base;
+	-webkit-font-smoothing: antialiased;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+}
+
+body {
+	@include font-size(15px);
+	line-height: 2.4rem;
+    font-weight: 400;
+	color: $primary_color;
+}
+
+p {
+	margin-bottom: 2rem;
+}
+
+strong, b, .strong {
+	font-weight: 600;
+}
+
+.img--responsive {
+	width: 100%;
+}
+
+.wrap {
+	display: block;
+	max-width: 124rem;
+	margin: 0 auto;
+	position: relative;
+	padding-left: 4rem;
+	padding-right: 4rem;
+
+	&--grid {
+		font-size: 0;
+		& > :not(&) {
+			font-size: 1.6rem;
+		}
+	}
+}
+
+ul {
+	li {
+		position: relative;
+		padding-left: 2.4rem;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-uppercase {
+	text-transform: uppercase;
+}
+.nomargin{
+	margin: 0 !important;
+}
+.nopadding{
+	padding: 0 !important;
+}
+.button{
+	height: 40px;
+	border: none;
+	background-color: $color_light-blue;
+	text-transform: uppercase;
+	border-radius: 3px;
+	font-family: $GothamProRegular;
+	font-size: 1.2rem;
+	color: $color_white;
+	cursor: pointer;
+	transition: background $time ease;
+	&:hover{
+		background-color: darken($color_light-blue, 5%);
+	}
+}

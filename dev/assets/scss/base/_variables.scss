@@ -2,22 +2,26 @@
 
 // Colors
 
-$bgcolor:                   #ffffff;
-$color_white:               #ffffff;
-$color_gray:                #dcdcdc;
-$primary_color:             #3f4147;
-$secondary_color:           #a70c5d;
-$secondary_color_darker:    #9f2865;
-$light_color:               #9a9a9a;
-$dark_color:                #454545;
-$border_color:              #f4f4f4;
+$bgcolor:                   #ffffff; //main-bg color
+$primary_color:             #3f4147; //used on mobile-nav
+$border_color:              #a6e8f0; //borders
+$color_white:               #ffffff; //the whitest color
+$color_blue:                #005096; //headers in section and some blue background
+$color_light-blue:          #00bcd4; //buttons
+$color_light-grey:          #f8f8f8; //background in sections
+$color_black:               #212121; //headers color
+$color_text-dark:           #535353; //footer text
+$color_icon-dark:           #7c7c7c; //footer icons
+$color_icon-light:          #c4c4c4; //header icons
 
 
 // Fonts
 
-$primary_font: 'Calibre', sans-serif;
+$GothamProRegular: 'GothamProRegular', $helvetica;
+$GothamProBlack: 'GothamProBlack', $helvetica;
+$GothamProBold: 'GothamProBold', $helvetica;
+$GothamProBoldItalic: 'GothamProBoldItalic', $helvetica;
 
-$font-name: '';
-
+$font-size-base: 10px;
 
 $time: 0.3s;
