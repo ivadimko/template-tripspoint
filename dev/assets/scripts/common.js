@@ -48,7 +48,7 @@ $('.slick').slick({
 		$(this).parent().children('.trip__content').slideToggle();
 		$(this).parent().children('.trip__price--bg').delay(200).slideToggle(600);
 	});
-		
+//--------------------------------------------		
 
 
 });
