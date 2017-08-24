@@ -41,6 +41,7 @@
 }
 .s-reviews{
 	background-color: $color_light-grey;
+	padding-bottom: 60px;
 	&__heading{
 		padding: 45px 0;
 	}
@@ -87,6 +88,34 @@
 	height: 100%;
 	background-color: rgba(#00a8ff, .2);
 	border-radius: 5px;
+	&--gallery{
+		padding: 15px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		background-color: transparent;
+		//@include linear-gradient(transparent 0%, transparent 60%, transparent 61%, #4c4b4b 100%);
+		transition: background .9s ease;
+		&::before{
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			bottom: 0;
+			left: 0;
+			@include linear-gradient(transparent 0%, transparent 60%, transparent 61%, #4c4b4b 100%);
+			border-radius: 5px;
+			transition: background .9s ease;
+
+		}
+	}
+	&--open{
+	/*background: rgba(#4c4b4b, .7);	*/
+		 &::before{
+			background: rgba(#4c4b4b, .7);
+			height: 100%;
+		}
+	}
 }
 .overlay{
 	&__top-block,
@@ -144,12 +173,37 @@
 				font-size: 1.3rem;
 			}
 		}
+		&--bg{
+			padding: 2px 13px;
+			margin: 10px 0;
+			background-color: rgba($color_white, .2);
+			border-radius: 3px;
+			align-self: flex-start;
+			z-index: 1000;
+		}
+	}
+	&__content{
+		z-index: 1000;
 	}
 	&__link{
 		color: inherit;
+		cursor: pointer;
+		position: relative;
+		z-index: 1000;
 		&:hover{
 			text-decoration: underline;
 		}
+	}
+	&__sublink{
+		@extend .quote__link;
+	}
+	&__text{
+		overflow: hidden;
+		max-height: 75px;
+		margin: 15px 0;
+		font-family: $GothamProRegular;
+		font-size: 1.2rem;
+		line-height: 1.5;
 	}
 	&__button{
 		background: none;
@@ -273,5 +327,42 @@
 	&__link{
 		@extend .quote__link;
 		font-size: 1.4rem;
+	}
+}
+.s-listings{
+	&__heading{
+		padding: 45px 0;
+	}
+}
+.gallery{
+	flex-wrap: wrap;
+	&__heading{
+		font-family: $GothamProBold;
+		font-size: 2.1rem;
+		color: $color_black;
+		padding-bottom: 30px;
+		flex: 0 0 31.8%;
+	}
+	&__image{
+		height: 210px;
+		position: relative;
+		background-size: cover;
+		background-position: 50% 50%;
+		border-radius: 5px;
+		flex: 0 0 31.8%;
+		margin-bottom: 23px;
+	}
+}
+.s-news{
+	background-color: $color_light-grey;
+	&__heading{
+		padding: 45px 0;
+	}
+	&__button{
+		margin: 25px auto 45px;
+		font-family: $GothamProBold;
+		text-transform: none;
+		font-size: 1.8rem;
+		padding: 8px 20px;
 	}
 }
