@@ -23,6 +23,7 @@ gulp.task('js', function() {
 	return gulp.src([
 //-----------------------Include libraries-------------------------
 		'./dev/assets/scripts/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
+		'dev/assets/scripts/libs/slick-carousel/slick/slick.js',
 //-----------------------------------------------------------------
 		])
 	.pipe(concat('scripts.min.js'))
@@ -65,8 +66,8 @@ gulp.task('sass-main', function () {
 	.pipe(gulp.dest('./dev/assets/css'))
   });
 
-gulp.task('sass', ['sass-base', 'sass-main'], function(){
-	browserSync.reload;
+gulp.task('sass', ['sass-main', 'sass-base'], function(){
+		browserSync.reload;
 });  
 
 gulp.task('watch', ['html', 'sass', 'js', 'browser-sync'], function() {

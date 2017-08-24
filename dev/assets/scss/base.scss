@@ -4,5 +4,7 @@
 @import "base/_reset";
 @import "base/_bootstrap-grid";
 @import "base/_fonts";
+@import "../scripts/libs/slick-carousel/slick/slick";
+//@import "../scripts/libs/slick-carousel/slick/slick-theme";
 @import "partials/_mobile-nav";
 @import "_common-styles";

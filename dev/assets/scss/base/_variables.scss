@@ -10,6 +10,7 @@ $color_blue:                #005096; //headers in section and some blue backgrou
 $color_light-blue:          #00bcd4; //buttons
 $color_light-grey:          #f8f8f8; //background in sections
 $color_black:               #212121; //headers color
+$color_text:								#929292; //main text
 $color_text-dark:           #535353; //footer text
 $color_icon-dark:           #7c7c7c; //footer icons
 $color_icon-light:          #c4c4c4; //header icons
@@ -18,6 +19,7 @@ $color_icon-light:          #c4c4c4; //header icons
 // Fonts
 
 $GothamProRegular: 'GothamProRegular', $helvetica;
+$GothamProItalic: 'GothamProItalic', $helvetica;
 $GothamProBlack: 'GothamProBlack', $helvetica;
 $GothamProBold: 'GothamProBold', $helvetica;
 $GothamProBoldItalic: 'GothamProBoldItalic', $helvetica;
