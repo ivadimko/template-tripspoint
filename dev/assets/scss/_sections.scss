@@ -47,6 +47,11 @@
 	}
 }
 .review{
+	&__controls{
+		display: flex;
+		align-items: center;
+		margin-top: 60px;
+	}
 	&__img{
 		border-radius: 5px;
 		display: block;
@@ -61,14 +66,14 @@
 		}
 	}
 	&__secondary-block{
-		margin-top: 13px;
+		margin: 13px -10px 0;
 	}
 	&__main,
 	&__secondary{
 		position: relative;
 	}
 	&__secondary{
-		flex: 0 0 49%;
+		margin: 0 10px;
 	}
 	&__more{
 		margin-top: 45px;
@@ -256,8 +261,14 @@
 		@extend .trip__feature;
 		text-transform: none;
 		padding-left: 15px;
+		transition: color $time ease;
+		&:hover{
+			text-decoration: underline;
+			color: darken($color_text, 50%);
+		}
 	}
-	&__dots{
+	&__dots,
+	&__image-dots{
 		position: relative;
 		display: inline-block;
 		width: 100%;
@@ -306,6 +317,7 @@
 		padding: 5px 15px;
 		align-items: center
 	}
+
 }
 .author{
 	&__avatar{
@@ -336,12 +348,15 @@
 }
 .gallery{
 	flex-wrap: wrap;
+	&__column{
+		flex: 0 0 31.8%;
+	}
 	&__heading{
 		font-family: $GothamProBold;
 		font-size: 2.1rem;
 		color: $color_black;
+		display: inline-block;
 		padding-bottom: 30px;
-		flex: 0 0 31.8%;
 	}
 	&__image{
 		height: 210px;

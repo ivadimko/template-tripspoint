@@ -9,247 +9,255 @@
 	border: 0;
 	box-sizing: border-box;
 	color: $color_icon-dark;
-    // Required, since we're setting absolute on pseudo-elements
-    position: relative;
-    vertical-align: middle;
-    &--left{
-    	margin-right: 10px;
-    }
-    &--right{
-    	margin-left: 10px;
-    }
-    &--padding{
-    	padding: .7rem 2rem !important;
-    }
-    &--circle {
-    	border-radius: 100%;
-    	
-    	&::before,
-    	&::after {
-    		border-radius: 100%;
-    	}
-    }
-    
-    &--bordered{
-        // Using inset box-shadow instead of border for sizing simplicity
-        box-shadow: inset 0 0 0 em(2px) $border_color;
-        
-        &::before,
-        &::after {
-        	box-sizing: inherit;
-        	content: '';
-        	position: absolute;
-        	width: 100%;
-        	height: 100%;
-        }
-    }
-    &--animated{
-    	transform: rotateY(180deg);
-    	transition: transform $time ease;
-    }
-}
-
-.border-animation{
-	&--spin {
-		padding: 0;
-		transition: color $time linear;
-		&:hover {  
-			color: darken($color_icon_dark, 30%);
-		}
-		
-		&::before,
+	// Required, since we're setting absolute on pseudo-elements
+	position: relative;
+	vertical-align: middle;
+	&--left{
+		margin-right: 10px;
+	}
+	&--right{
+		margin-left: 10px;
+	}
+	&--padding{
+		padding: .7rem 2rem !important;
+	}
+	&--circle {
+		border-radius: 100%;
+			&::before,
 		&::after {
-			top: 0;
-			left: 0;
+			border-radius: 100%;
 		}
-		
-		&::before {
-            border: em(2px) solid transparent; // We're animating border-color again
-        }
-        
-        &:hover::before {
-            border-top-color: darken($color_icon_dark, 30%); // Show borders
-            border-right-color: darken($color_icon_dark, 30%);
-            border-bottom-color: darken($color_icon_dark, 30%);
-            
-            transition:
-                border-top-color 0.15s linear, // Stagger border appearances
-                border-right-color 0.15s linear 0.10s,
-                border-bottom-color 0.15s linear 0.20s;
-            }
-            
-            &::after {
-            border: 0 solid transparent; // Makes border thinner at the edges? I forgot what I was doing
-        }
-        
-        &:hover::after {
-            border-top: em(2px) solid darken($color_icon_dark, 30%); // Shows border
-            border-left-width: em(2px); // Solid edges, invisible borders
-            border-right-width: em(2px); // Solid edges, invisible borders
-            transform: rotate(270deg); // Rotate around circle
-            
-            transition:
-            transform 0.4s linear 0s,
-                border-left-width 0s linear 0.35s; // Solid edge post-rotation
-            }
-        }    
-        &--draw {
-        	transition: color 0.25s;
-
-        	&::before,
-        	&::after {
-        // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
-        border: 2px solid transparent;
-        width: 0;
-        height: 0;
-    }
-
-    // This covers the top & right borders (expands right, then down)
-    &::before {
-    	top: 0;
-    	left: 0;
-    }
-
-    // And this the bottom & left borders (expands left, then up)
-    &::after {
-    	bottom: 0;
-    	right: 0;
-    }
-    
-    &:hover {
-    	color: $color_black;
-    }
-
-    // Hover styles
-    &:hover::before,
-    &:hover::after {
-    	width: 100%;
-    	height: 100%;
-    }
-
-    &:hover::before {
-        border-top-color: $color_black; // Make borders visible
-        border-right-color: $color_black;
-        transition:
-        width 0.15s ease-out, // Width expands first
-        height 0.15s ease-out 0.15s; // And then height
-    }
-
-    &:hover::after {
-        border-bottom-color: $color_black; // Make borders visible
-        border-left-color: $color_black;
-        transition:
-        border-color 0s ease-out 0.3s, // Wait for ::before to finish before showing border
-        width 0.15s ease-out 0.3s, // And then exanding width
-        height 0.15s ease-out 0.45s; // And finally height
-    }
-}
+	}
+	
+	&--bordered{
+			// Using inset box-shadow instead of border for sizing simplicity
+			box-shadow: inset 0 0 0 em(2px) $border_color;
+			
+			&::before,
+			&::after {
+				box-sizing: inherit;
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 100%;
+			}
+		}
+		&--animated{
+			transform: rotateY(180deg);
+		transition: transform $time ease;
+		}
+	}
+		.border-animation{
+		&--spin {
+				padding: 0;
+			transition: color $time linear;
+			&:hover {  
+				color: darken($color_icon_dark, 30%);
+			}
+			
+			&::before,
+			&::after {
+					top: 0;
+				left: 0;
+			}
+			
+			&::before {
+						border: em(2px) solid transparent; // We're animating border-color again
+				}
+				
+				&:hover::before {
+					border-top-color: darken($color_icon_dark, 30%); // Show borders
+					border-right-color: darken($color_icon_dark, 30%);
+					border-bottom-color: darken($color_icon_dark, 30%);
+					
+					transition:
+							border-top-color 0.15s linear, // Stagger border appearances
+								border-right-color 0.15s linear 0.10s,
+							border-bottom-color 0.15s linear 0.20s;
+						}
+						
+						&::after {
+					border: 0 solid transparent; // Makes border thinner at the edges? I forgot what I was doing
+				}
+				
+				&:hover::after {
+					border-top: em(2px) solid darken($color_icon_dark, 30%); // Shows border
+						border-left-width: em(2px); // Solid edges, invisible borders
+					border-right-width: em(2px); // Solid edges, invisible borders
+					transform: rotate(270deg); // Rotate around circle
+					
+					transition:
+					transform 0.4s linear 0s,
+							border-left-width 0s linear 0.35s; // Solid edge post-rotation
+						}
+					}    
+					&--draw {
+						transition: color 0.25s;
+							&::before,
+						&::after {
+			// Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
+			border: 2px solid transparent;
+			width: 0;
+			height: 0;
+		}
+		// This covers the top & right borders (expands right, then down)
+	&::before {
+		top: 0;
+		left: 0;
+	}
+		// And this the bottom & left borders (expands left, then up)
+	&::after {
+		bottom: 0;
+		right: 0;
+	}
+	
+	&:hover {
+		color: $color_black;
+	}
+		// Hover styles
+	&:hover::before,
+	&:hover::after {
+		width: 100%;
+		height: 100%;
+	}
+		&:hover::before {
+			border-top-color: $color_black; // Make borders visible
+			border-right-color: $color_black;
+			transition:
+			width 0.15s ease-out, // Width expands first
+			height 0.15s ease-out 0.15s; // And then height
+		}
+			&:hover::after {
+			border-bottom-color: $color_black; // Make borders visible
+			border-left-color: $color_black;
+			transition:
+			border-color 0s ease-out 0.3s, // Wait for ::before to finish before showing border
+			width 0.15s ease-out 0.3s, // And then exanding width
+			height 0.15s ease-out 0.45s; // And finally height
+		}
+	}
 }
 .header{
 	&__logo{
-		display: inline-block;
-		margin-top: 2px;
+		position: absolute;
+		width: 175px;
+		left: 0;
+		top: 7px;
+	}
+	&__nav{
+		margin-left: auto;
 	}
 	&__menu {
 		font-family: $GothamProRegular;
 		text-align: right;
-		padding: 30px 0 40px;
+		padding: 30px 0;
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
-		.header-menu__item {   
-			padding: .7rem 0rem;
-			margin: 0 2.5rem;    
-			cursor: pointer;
-			&:first-child{
-				margin-left: 0
-			}
-			&:last-child{
-				margin-right: 0;
-			}
-			.dropdown__arrow{
-				margin-left: 5px;
-				transform: rotate(0);
-				transition: transform $time ease;
-			}
-			a{
-				color: $color_icon-dark;
-				@include font-size(12px);
-				transition: color $time linear;
-				i{
-					font-size: 1.4em;
-				}
-			}
-			&:hover{
-				> a{
-					color: darken($color_icon_dark, 30%);
-				}
-				.header__submenu{
-					transform: scaleY(1);
-					z-index: 1;
-				}
-				.border-animation--spin {
-					@extend .border-animation--spin:hover;
-				}
-				.icon--animated{
-					transform: rotateY(0);
-				}
-				.dropdown__arrow{
-					transform: rotate(-180deg);
-				}
-			}
-			.header__submenu{
-				transform: scaleY(0);    
-				transform-origin: top;
-				transition: transform $time ease;
-				position: absolute;
-				left: -50%;
-				background: transparent;
-				width: 200%;
-				background-color: rgba($color_white, .7);
-				border-radius: 0 0 10px 10px;
-				.header-submenu__item{
-					padding: .5rem 0;
-					border-bottom: 1px solid $color_text-dark;
-					text-align: center;
-					transition: background-color $time ease;
-					&:first-child{
-						padding-top: 29px;
-					}
-					&:last-child{
-						border-bottom: none;
-						border-radius: 0 0 10px 10px;
-					}
-					&:hover{
-						>a{
-							color: darken($color_icon_dark, 30%);
-						}
-						background-color: $color_white;
-					}
-				}
-			}
-			
-		}
+		
 	}
 	&__content{
 		background: url("../img/header/header-bg.jpg") center center no-repeat;
 		background-size: cover;
-		margin-top: -23px;
 	}
 	&__form{
-		display: inline-block;
+		display: block;
 		margin-top: 60px;
 		background-color: rgba($color_blue, .4);
 		color: $color_white;
 		border: 1px solid $border_color;
 		border-radius: 5px;
-		padding: 20px 0;
+		padding: 10px 0 20px;
+		max-width: 770px;
 	}
 	&__bot-line{
 		margin-top: 80px;
 		background-color: rgba($color_white, .85);
 	}
 }
+.adaptive-item{
+	margin-right: 2.5rem;
+}
+.header-menu__item {   
+	padding: .7rem 0rem;
+	margin: 0 2.5rem;    
+	cursor: pointer;
+	display: inline-block;
+	&:first-child{
+		margin-left: 0
+	}
+	&:last-child{
+		margin-right: 0;
+	}
+	color: $color_icon-dark;
+	@include font-size(12px);
+	transition: color $time linear;
+	i{
+		font-size: 1.4em;
+	}
+	a{
+		color: inherit;
+	}
+	&:hover{
+		
+		color: darken($color_icon_dark, 30%);
+		
+		.border-animation--spin {
+			@extend .border-animation--spin:hover;
+		}
+		.icon--animated{
+			transform: rotateY(0);
+		}
+	}
+}
+.dropdown__arrow{
+	margin-left: 5px;
+	transform: rotate(0);
+	transition: transform $time ease;
+}
+.currency{
+	z-index: 100;
+	text-transform: uppercase;
+	min-width: 42px;
+	&--open{
+		color: darken($color_icon_dark, 30%);
+		.dropdown__arrow{
+			transform: rotate(-180deg);
+		}
+	}
+	&__name{
+		}
+	&__list{
+		position: absolute;
+		left: -50%;
+		top: 71px;
+		background: transparent;
+		width: 200%;
+		background-color: rgba($color_white, .7);
+		border-radius: 0 0 10px 10px;
+	}
+	&__item{
+		display: block !important;
+		padding: .5rem 0;
+		border-bottom: 1px solid $color_text-dark;
+		text-align: center;
+		transition: background-color $time ease;
+		color: $color_icon-dark;
+		&:hover{
+			color: darken($color_icon_dark, 30%);
+		}
+		&:last-child{
+			border-bottom: none;
+			border-radius: 0 0 10px 10px;
+		}
+		&:hover{
+			>a{
+				color: darken($color_icon_dark, 30%);
+			}
+			background-color: $color_white;
+		}
+	}
+	}
 .header-bot-line__item{
 	display: flex;
 	flex-wrap: wrap;
@@ -299,12 +307,20 @@
 		font-family: $GothamProBlack;
 		font-size: 4.5rem;
 		text-transform: uppercase;
+		line-height: 1.3;
 	}
 	&__description{
 		font-family: $GothamProRegular;
 		font-size: 1.9rem;
 		padding: 35px;
 		margin: 0;
+	}
+	&__fields{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		width: 100%;
+		padding: 0 10px;
 	}
 	&__input{
 		display: inline-block;
@@ -313,28 +329,28 @@
 		border-radius: 3px;
 		font-family: $GothamProRegular;
 		font-size: 1.2rem;
-		margin-right: 20px;
-		width: 27%;
+		width: 100%;
 		@include placeholder(#9a9a9a, $GothamProRegular);
-		transition: font $time ease;
+		transition: border $time ease;
+		border: 1px solid transparent;
 		&:focus{
-			font-size: 1.3rem;
+			border: 1px solid $color_black;
 		}
 		&:valid{
-			font-size: 1.3rem;
+			border: 1px solid $color_black;
 		}
 		&--location,
 		&--interest{
 			position: relative;
+			display: block;
 			cursor: pointer;
+			flex: 0 0 30%;
 			&::before{
 				position: absolute;
 				font-family: "FontAwesome";
-				top: 0;
+				top: 8px;
 				left: 15px;
 				font-size: 20px;
-				line-height: 100%;
-				height: 100%;
 				color: #9a9a9a;
 			}
 		}
@@ -347,6 +363,5 @@
 	}
 	&__button{
 		padding: 14px 35px;
-		margin-top: 5px;
 	}
 }

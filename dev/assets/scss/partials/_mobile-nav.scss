@@ -1,5 +1,7 @@
 .burger {
-  position: relative;
+  position: absolute;
+  right: 0;
+  top: 40px;
   background: none;
   border: none;
   width: 3rem;
@@ -7,13 +9,14 @@
   transform: rotate(0deg);
   transition: .5s ease-in-out;
   cursor: pointer;
-
+  z-index: 1000;
+  transform: translateX(0);
   span {
     display: block;
     position: absolute;
     width: 100%;
     height: .5rem;
-    background: $primary_color;
+    background: $color_text;
     border-radius: .9rem;
     opacity: 1;
     left: 0;
@@ -77,17 +80,17 @@
 }
 
 .mobile-nav {
-  position: fixed;
+  position: absolute;
   visibility: hidden;
   opacity: 0;
-  background: $primary_color;
+  background: transparent;
   width: 100%;
-  height: 100%;
-  padding: 7rem 2rem 4rem;
+  height: 105px;
+  padding: 30px;
   top: 0;
   left: 0;
   z-index: 5;
-  transform: translateY(-100%) translateZ(0);
+  transform: translateX(100%) translateZ(0);
 
   transition-duration: 1s;
   transition-timing-function: ease;
@@ -96,14 +99,19 @@
   &.open {
     visibility: visible;
     opacity: 1;
-    transform: translateY(0%) translateZ(0);
+    transform: translateX(0%) translateZ(0);
   }
-
+  &__menu{
+    display: flex;
+    justify-content: space-between;
+      max-width: 79%;
+  margin: auto;
+  }
   &__menu li {
-    color: $color_white;
-    font-size: 3rem;
-    line-height: 4rem;
+    color: $color_icon-dark;
+    font-size: 1.2rem;
     font-weight: 300;
+    display: inline-block;
 
     a {
       color: inherit;
@@ -118,7 +126,7 @@
     margin: 4rem;
 
     span {
-      background: $color_white;
+      background: $color_text;
     }
   }
 }

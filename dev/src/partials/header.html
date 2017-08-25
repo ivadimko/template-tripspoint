@@ -1,62 +1,56 @@
 <header id="header" class="header">
-<!--
-	
--->
-<!--    
-	<button class="burger header__burger">
-		<span></span>
-		<span></span>
-		<span></span>
-	</button>
--->
+   
 <div class="header-wrap">
 	<div class="header__top-line">
 		<div class="container nopadding">
-			<div class="row">
-				<div class="col-md-2">
+			<div class="row no-gutters justify-content-between">
 					<a href="#" class="header__logo">
 						<img src="./assets/img/logo.png" alt="main logo">
 					</a>
-				</div>
-				<div class="col-md-10">
+					<button class="burger header__burger">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
 					<nav class="header__nav" role="navigation">
 						<ul class="header__menu">
-							<li class="header-menu__item"><a href="#"><span class="icon icon--left icon--bordered icon--circle border-animation--spin"><i class="fa fa-user icon--animated" aria-hidden="true"></i></span>Log in or create any account</a></li>                                
+							<div class="adaptive-item">
+							<li class="header-menu__item"><a href="#"><span class="icon icon--left icon--bordered icon--circle border-animation--spin  adaptive-remove"><i class="fa fa-user icon--animated" aria-hidden="true"></i></span>Log in or create any account</a></li>                                
 							<li class="header-menu__item icon--bordered icon--padding border-animation--draw"><a href="#">Add your listing</a></li>
+							</div>
 							<li class="header-menu__item"><a href="#"><i class="fa fa-heart icon--animated" aria-hidden="true"></i></a></li>
 							<li class="header-menu__item"><a href="#"><i class="fa fa-eye icon--animated" aria-hidden="true"></i></a></li>
-							<li class="header-menu__item header-menu__item--dropdown text-uppercase"><a href="#">Eur<i class="fa fa-angle-down dropdown__arrow" aria-hidden="true"></i></a>
-								<ul class="header__submenu">
-									<li class="header-submenu__item text-uppercase"><a href="#">USD</a></li>
-									<li class="header-submenu__item text-uppercase"><a href="#">UAH</a></li>
-									<li class="header-submenu__item text-uppercase"><a href="#">RUR</a></li>
+							<li class="header-menu__item currency"><span class="currency__name">Eur</span><i class="fa fa-angle-down dropdown__arrow" aria-hidden="true"></i>
+								<ul class="currency__list">
+									<li class="currency__item"><span class="currency__name">USD</span></li>
+									<li class="currency__item"><span class="currency__name">UAH</span></li>
+									<li class="currency__item"><span class="currency__name">RUR</span></li>
 								</ul>
 							</li>
-							<li class="header-menu__item"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="icon icon--right icon--bordered icon--circle border-animation--spin">0</span></a></li>
+							<li class="header-menu__item"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="icon icon--right icon--bordered icon--circle border-animation--spin adaptive-remove">0</span></a></li>
 						</ul>
 					</nav>
-				</div>
 			</div>
 		</div>
 	</div>
 	<div class="header__content text-center">
 		<div class="container nopadding">
-			<div class="row">
-				<div class="col-md-8 offset-md-2">
+			<div class="row no-gutters justify-content-center">
 					<form action="#" class="header__form">
 						<h1 class="form__head">Your journey begins now</h1>
 						<p class="form__description">Unique Tours, trips, activities, accommodations, rental services &amp; 
 							things to do from local companies and people all the world around</p>
-							<label class="form__input--location data="Where are you going?"><input type="text" class="form__input" placeholder="Where are you going?" required></label>
-							<label class="form__input--interest data="What are you looking for?"><input type="text" class="form__input" placeholder="What are you looking for?" required></label>
+							<div class="form__fields">
+							<div class="form__input--location"><input type="text" class="form__input" name="location" placeholder="Where are you going?" required></div>
+							<div class="form__input--interest"><input type="text" class="form__input" name="interest" placeholder="What are you looking for?" required></div>
 							<input type="submit" class="button form__button" value="Search">
-						</form>
-					</div>
+							</div>
+						</form>				
 				</div>
 			</div>
 			<div class="header__bot-line">
 				<div class="container nopadding">
-					<div class="row">
+					<div class="row no-gutters">
 						<div class="col-md-4">
 							<div class="header-bot-line__item">
 								<span class="item__number icon icon--bordered icon--circle border-animation--spin">1</span>
@@ -78,7 +72,7 @@
 						<div class="col-md-4">
 							<div class="header-bot-line__item">
 								<span class="item__number icon icon--bordered icon--circle border-animation--spin">3</span>
-								<div class="item__description">
+								<div class="item__description item__description--noborder">
 									<a href="#"class="item__head">Use your e-ticket</a>
 									<p class="item__text">Show e-Ticket of your travel destination and pay the balance on the day of activity</p>
 								</div>

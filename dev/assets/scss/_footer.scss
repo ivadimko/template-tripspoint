@@ -48,6 +48,7 @@
 	&__link{
 		color: $color_icon-light;
 		font-size: 1.8rem;
+		transition: color $time ease;
 		&:hover{
 			color: darken($color_icon-light, 20%)
 		}
