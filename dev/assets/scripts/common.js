@@ -102,8 +102,8 @@ $(document).on('click', '.currency__item', function(){
 	$('.trip__content').css('display', 'none');
 	$(document).on('click','.js-trip-link', function(){
 		$(this).parent().toggleClass('image-overlay--open');
-		$(this).parent().children('.trip__content').slideToggle();
-		$(this).parent().children('.trip__price--bg').delay(200).slideToggle(600);
+		$(this).parent().children('.trip__content').slideToggle(700);
+		$(this).parent().children('.trip__price--bg').fadeToggle(690);
 	});
 //--------------------------------------------		
 //----------------Footer Nav------------------
