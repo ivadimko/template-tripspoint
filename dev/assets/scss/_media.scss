@@ -35,10 +35,16 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px) {
+	.currency__list{
+		top: 75px;
+	}
 	.adaptive-item{
 		margin-right: 0;
 	}
 	.header{
+		&__top-line{
+			margin-top: 105px;
+		}
 		&__logo{
 			position: relative;
 			margin: auto;
@@ -48,7 +54,7 @@
 		}
 
 		&__nav{
-			visibility: hidden;
+			display: none;
 		}
 		&__menu{
 			display: flex;
@@ -137,7 +143,7 @@
 		}
 	}
 	.currency__list{
-		top: 30px;
+		top: 33px;
 	}
 	.mobile-nav{
 		padding-top: 0;
@@ -397,6 +403,12 @@
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
 	.header__burger{
+		display: none;
+	}
+	.header__logo{
+		display: block !important;
+	}
+	.mobile-nav{
 		display: none;
 	}
 }

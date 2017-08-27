@@ -1,7 +1,7 @@
 .burger {
   position: absolute;
-  right: 0;
-  top: 40px;
+  right: 5px;
+  top: -65px;
   background: none;
   border: none;
   width: 3rem;
@@ -90,7 +90,7 @@
   top: 0;
   left: 0;
   z-index: 5;
-  transform: translateX(-100%) translateZ(0);
+  transform: translateY(-100%) translateZ(0);
 
   transition-duration: 1s;
   transition-timing-function: ease;
@@ -99,7 +99,7 @@
   &.open {
     visibility: visible;
     opacity: 1;
-    transform: translateX(0%) translateZ(0);
+    transform: translateY(0%) translateZ(0);
   }
   &__menu{
     display: flex;
