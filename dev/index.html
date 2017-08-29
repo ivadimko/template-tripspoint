@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-<head lang="ru">
+<html  lang="zxx">
+<head>
     <meta charset="UTF-8">
     <title>TripsPoint</title>
     <meta name="description" content="Travel agency. Everywhere you go">
@@ -26,12 +26,12 @@
 						<span></span>
 						<span></span>
 					</button>
-					<nav class="header__nav" role="navigation">
+					<nav class="header__nav">
 						<ul class="header__menu">
-							<div class="adaptive-item">
-							<li class="header-menu__item"><a href="#"><span class="icon icon--left icon--bordered icon--circle border-animation--spin  adaptive-remove"><i class="fa fa-user icon--animated" aria-hidden="true"></i></span>Log in or create any account</a></li>                                
-							<li class="header-menu__item icon--bordered icon--padding border-animation--draw"><a href="#">Add your listing</a></li>
-							</div>
+							<li class="adaptive-item">
+							<div class="header-menu__item"><a href="#"><span class="icon icon--left icon--bordered icon--circle border-animation--spin  adaptive-remove"><i class="fa fa-user icon--animated" aria-hidden="true"></i></span>Log in or create any account</a></div>                                
+							<div class="header-menu__item icon--bordered icon--padding border-animation--draw"><a href="#">Add your listing</a></div>
+							</li>
 							<li class="header-menu__item"><a href="#"><i class="fa fa-heart icon--animated" aria-hidden="true"></i></a></li>
 							<li class="header-menu__item"><a href="#"><i class="fa fa-eye icon--animated" aria-hidden="true"></i></a></li>
 							<li class="header-menu__item currency"><span class="currency__name">Eur</span><i class="fa fa-angle-down dropdown__arrow" aria-hidden="true"></i>
@@ -69,7 +69,7 @@
 							<div class="header-bot-line__item">
 								<span class="item__number icon icon--bordered icon--circle border-animation--spin">1</span>
 								<div class="item__description">
-									<a href="#"class="item__head">Book before you go</a>
+									<a href="#" class="item__head">Book before you go</a>
 									<p class="item__text">Pay just a small Booking Deposit to confirm your booking.</p>
 								</div>
 							</div>
@@ -78,7 +78,7 @@
 							<div class="header-bot-line__item">
 								<span class="item__number icon icon--bordered icon--circle border-animation--spin">2</span>
 								<div class="item__description">
-									<a href="#"class="item__head">Get your e-ticket</a>
+									<a href="#" class="item__head">Get your e-ticket</a>
 									<p class="item__text">Save it in phone or print and take with you to your travel destination</p>
 								</div>
 							</div>
@@ -87,7 +87,7 @@
 							<div class="header-bot-line__item">
 								<span class="item__number icon icon--bordered icon--circle border-animation--spin">3</span>
 								<div class="item__description item__description--noborder">
-									<a href="#"class="item__head">Use your e-ticket</a>
+									<a href="#" class="item__head">Use your e-ticket</a>
 									<p class="item__text">Show e-Ticket of your travel destination and pay the balance on the day of activity</p>
 								</div>
 							</div>
@@ -110,16 +110,13 @@
     </button>
 </div>
 
-<main id="main" role="main">
+<main id="main">
 
     <section class="s-map container nopadding">
     	<h2 class="section__heading s-map__heading">what's goin on right now</h2>
     	<div id="map">
     		<iframe class="map__image" 
-    			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52039552.46538789!2d-3.3033811006136924!3d37.24196026096903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604ac9fa716163%3A0xbdfdf4f3980d4fc2!2zQ2FycmVyIGRlIFZpY2VudCBCYWxkb3bDrSwgNDYwMTIgRWwgUGFsbWFyLCBWYWxlbmNpYSwg0JjRgdC_0LDQvdC40Y8!5e0!3m2!1sru!2sua!4v1503849443906" 
-    			width="100%" 
-    			height="430" 
-    			frameborder="0" 
+    			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52039552.46538789!2d-3.3033811006136924!3d37.24196026096903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604ac9fa716163%3A0xbdfdf4f3980d4fc2!2zQ2FycmVyIGRlIFZpY2VudCBCYWxkb3bDrSwgNDYwMTIgRWwgUGFsbWFyLCBWYWxlbmNpYSwg0JjRgdC_0LDQvdC40Y8!5e0!3m2!1sru!2sua!4v1503849443906"
     			allowfullscreen>
     		</iframe>
     <!-- 		<img src="./assets/img/sections/s-map/map.jpg" alt="map" class="map__image responsive">
@@ -495,7 +492,7 @@
     			<div class="gallery__image gallery__image--in-column" style="background-image: url(./assets/img/sections/s-listings/listing-1.jpg);">
     				<div class="image-overlay image-overlay--gallery">
     					<h4 class="trip__heading trip__heading--small trip__link js-trip-link">
-    						Caribbean Islands</br> 
+    						Caribbean Islands<br> 
     						Cruise - days from Miami
     					</h4>
     					<span class="trip__price trip__price--small trip__price--bg">from <strong>&#36; 799</strong></span>
@@ -508,7 +505,7 @@
     			<div class="gallery__image gallery__image--in-column" style="background-image: url(./assets/img/sections/s-listings/listing-2.jpg);">
     				<div class="image-overlay image-overlay--gallery">
     					<h4 class="trip__heading trip__heading--small trip__link js-trip-link">
-    						Caribbean Islands</br> 
+    						Caribbean Islands<br> 
     						Cruise - days from Miami
     					</h4>
     					<span class="trip__price trip__price--small trip__price--bg">from <strong>&#36; 799</strong></span>
@@ -521,7 +518,7 @@
     			<div class="gallery__image gallery__image--in-column" style="background-image: url(./assets/img/sections/s-listings/listing-3.jpg);">
     				<div class="image-overlay image-overlay--gallery">
     					<h4 class="trip__heading trip__heading--small trip__link js-trip-link">
-    						Caribbean Islands</br> 
+    						Caribbean Islands<br> 
     						Cruise - days from Miami
     					</h4>
     					<span class="trip__price trip__price--small trip__price--bg">from <strong>&#36; 799</strong></span>
@@ -537,7 +534,7 @@
     			<div class="gallery__image gallery__image--in-column" style="background-image: url(./assets/img/sections/s-listings/listing-4.jpg);">
     				<div class="image-overlay image-overlay--gallery">
     					<h4 class="trip__heading trip__heading--small trip__link js-trip-link">
-    						Caribbean Islands</br> 
+    						Caribbean Islands<br> 
     						Cruise - days from Miami
     					</h4>
     					<span class="trip__price trip__price--small trip__price--bg">from <strong>&#36; 799</strong></span>
@@ -550,7 +547,7 @@
     			<div class="gallery__image gallery__image--in-column" style="background-image: url(./assets/img/sections/s-listings/listing-5.jpg);">
     				<div class="image-overlay image-overlay--gallery">
     					<h4 class="trip__heading trip__heading--small trip__link js-trip-link">
-    						Caribbean Islands</br> 
+    						Caribbean Islands<br> 
     						Cruise - days from Miami
     					</h4>
     					<span class="trip__price trip__price--small trip__price--bg">from <strong>&#36; 799</strong></span>
@@ -563,7 +560,7 @@
     			<div class="gallery__image gallery__image--in-column" style="background-image: url(./assets/img/sections/s-listings/listing-6.jpg);">
     				<div class="image-overlay image-overlay--gallery">
     					<h4 class="trip__heading trip__heading--small trip__link js-trip-link">
-    						Caribbean Islands</br> 
+    						Caribbean Islands<br> 
     						Cruise - days from Miami
     					</h4>
     					<span class="trip__price trip__price--small trip__price--bg">from <strong>&#36; 799</strong></span>
@@ -579,7 +576,7 @@
     			<div class="gallery__image gallery__image--in-column" style="background-image: url(./assets/img/sections/s-listings/listing-7.jpg);">
     				<div class="image-overlay image-overlay--gallery">
     					<h4 class="trip__heading trip__heading--small trip__link js-trip-link">
-    						Caribbean Islands</br> 
+    						Caribbean Islands<br> 
     						Cruise - days from Miami
     					</h4>
     					<span class="trip__price trip__price--small trip__price--bg">from <strong>&#36; 799</strong></span>
@@ -592,7 +589,7 @@
     			<div class="gallery__image gallery__image--in-column" style="background-image: url(./assets/img/sections/s-listings/listing-8.jpg);">
     				<div class="image-overlay image-overlay--gallery">
     					<h4 class="trip__heading trip__heading--small trip__link js-trip-link">
-    						Caribbean Islands</br> 
+    						Caribbean Islands<br> 
     						Cruise - days from Miami
     					</h4>
     					<span class="trip__price trip__price--small trip__price--bg">from <strong>&#36; 799</strong></span>
@@ -605,7 +602,7 @@
     			<div class="gallery__image gallery__image--in-column" style="background-image: url(./assets/img/sections/s-listings/listing-9.jpg);">
     				<div class="image-overlay image-overlay--gallery">
     					<h4 class="trip__heading trip__heading--small trip__link js-trip-link">
-    						Caribbean Islands</br> 
+    						Caribbean Islands<br> 
     						Cruise - days from Miami
     					</h4>
     					<span class="trip__price trip__price--small trip__price--bg">from <strong>&#36; 799</strong></span>
@@ -626,7 +623,7 @@
     			<div class="gallery__image" style="background-image: url(./assets/img/sections/s-news/news-1.jpg);">
     				<div class="image-overlay image-overlay--gallery">
     					<h4 class="trip__heading trip__heading--small trip__link js-trip-link">
-    						Very important news</br>
+    						Very important news<br>
     						came from India
     					</h4>
     					<div class="trip__content">
@@ -638,7 +635,7 @@
     			<div class="gallery__image" style="background-image: url(./assets/img/sections/s-news/news-2.jpg);">
     				<div class="image-overlay image-overlay--gallery">
     					<h4 class="trip__heading trip__heading--small trip__link js-trip-link">
-    						Very important news</br>
+    						Very important news<br>
     						came from India
     					</h4>
     					<div class="trip__content">
@@ -650,7 +647,7 @@
     			<div class="gallery__image" style="background-image: url(./assets/img/sections/s-news/news-3.jpg);">
     				<div class="image-overlay image-overlay--gallery">
     					<h4 class="trip__heading trip__heading--small trip__link js-trip-link">
-    						Very important news</br>
+    						Very important news<br>
     						came from India
     					</h4>
     					<div class="trip__content">
@@ -662,7 +659,7 @@
     			<div class="gallery__image" style="background-image: url(./assets/img/sections/s-news/news-4.jpg);">
     				<div class="image-overlay image-overlay--gallery">
     					<h4 class="trip__heading trip__heading--small trip__link js-trip-link">
-    						Very important news</br>
+    						Very important news<br>
     						came from India
     					</h4>
     					<div class="trip__content">
@@ -674,7 +671,7 @@
     			<div class="gallery__image" style="background-image: url(./assets/img/sections/s-news/news-5.jpg);">
     				<div class="image-overlay image-overlay--gallery">
     					<h4 class="trip__heading trip__heading--small trip__link js-trip-link">
-    						Very important news</br>
+    						Very important news<br>
     						came from India
     					</h4>
     					<div class="trip__content">
@@ -686,7 +683,7 @@
     			<div class="gallery__image" style="background-image: url(./assets/img/sections/s-news/news-6.jpg);">
     				<div class="image-overlay image-overlay--gallery">
     					<h4 class="trip__heading trip__heading--small trip__link js-trip-link">
-    						Very important news</br>
+    						Very important news<br>
     						came from India
     					</h4>
     					<div class="trip__content">
@@ -820,18 +817,17 @@
 					<a href="#"><img src="./assets/img/logo-footer.png" alt="footer logo"></a>
 				</div>
 				<ul class="social__menu">
-					<li class="social__item"><a href="#" class="social__link"><i class="fa fa-pinterest-p" aria-hidden="true"></i></li></a>
-					<li class="social__item"><a href="#" class="social__link"><i class="fa fa-youtube-play" aria-hidden="true"></i></li></a>
-					<li class="social__item"><a href="#" class="social__link"><i class="fa fa-google-plus" aria-hidden="true"></i></li></a>
-					<li class="social__item"><a href="#" class="social__link"><i class="fa fa-facebook-official" aria-hidden="true"></i></li></a>
-					<li class="social__item"><a href="#" class="social__link"><i class="fa fa-twitter" aria-hidden="true"></i></li></a>
-					<li class="social__item"><a href="#" class="social__link"><i class="fa fa-instagram" aria-hidden="true"></i></li></a>
-					<li class="social__item"><a href="#" class="social__link"><i class="fa fa-vimeo" aria-hidden="true"></i></li></a>
+					<li class="social__item"><a href="#" class="social__link"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+					<li class="social__item"><a href="#" class="social__link"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+					<li class="social__item"><a href="#" class="social__link"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+					<li class="social__item"><a href="#" class="social__link"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+					<li class="social__item"><a href="#" class="social__link"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li class="social__item"><a href="#" class="social__link"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					<li class="social__item"><a href="#" class="social__link"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
-</div>
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
