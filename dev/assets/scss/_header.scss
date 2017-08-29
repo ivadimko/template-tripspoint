@@ -32,7 +32,7 @@
 	&--bordered{
 			// Using inset box-shadow instead of border for sizing simplicity
 			box-shadow: inset 0 0 0 em(2px) $border_color;
-			
+			position: relative;
 			&::before,
 			&::after {
 				box-sizing: inherit;
